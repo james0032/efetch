@@ -14,8 +14,8 @@ def fetch_entrez(ifile, opath):
         #raise IOError('Path existed.')
 
     dfRec = pd.read_csv(ifile, sep='\t', header=1)
-    num = 20 #dfRec.shape[0]
-    step = 5
+    num = dfRec.shape[0]
+    step = 200
     starts = np.arange(0, num, step)
     Entrez.email = "cc3423@drexel.edu"
     dat = []
